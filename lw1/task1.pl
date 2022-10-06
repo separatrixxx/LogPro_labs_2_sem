@@ -66,3 +66,9 @@ check_geom_progress_standart(R, D):-
     check_geom_progress_standart(R1, D).
 
 % Пример совместного использования предикатов, реализованных в пунктах 3 и 4
+
+my_pop(L, R, Last) :-
+    mylength(L, Len),
+    LastPos is Len - 1,
+    n_elem(LastPos, L, Last),
+    append(R, [_], L).
